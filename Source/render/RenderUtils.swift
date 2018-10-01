@@ -107,6 +107,8 @@ class RenderUtils {
         } else if let arc = locus as? Arc {
             if arc.ellipse.rx == arc.ellipse.ry {
                 return arcToPath(arc)
+            } else {
+                return arcToPath(arc)
             }
         } else if let point = locus as? Point {
             let path = MBezierPath()
