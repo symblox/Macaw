@@ -235,7 +235,7 @@ open class MacawView: MView, MGestureRecognizerDelegate {
         let touchPoints = convert(touches: touches)
         if !self.node.shouldCheckForPressed() &&
             !self.node.shouldCheckForMoved() &&
-            !self.node.shouldCheckForReleased () {
+            !self.node.shouldCheckForReleased() {
             return
         }
 
@@ -578,11 +578,14 @@ open class MacawView: MView, MGestureRecognizerDelegate {
     }
 }
 
-class LayoutHelper {
+public class LayoutHelper {
 
     private var prevSize: Size?
     private var prevRect: Rect?
     private var prevTransform: Transform?
+
+    public init() {
+    }
 
     public func getTransform(_ nodeRenderer: NodeRenderer, _ layout: ContentLayout, _ size: Size) -> Transform {
         setSize(size: size)

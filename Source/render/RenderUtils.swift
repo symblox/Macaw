@@ -6,7 +6,7 @@ import UIKit
 import AppKit
 #endif
 
-class RenderUtils {
+public class RenderUtils {
 
     class func mapDash(_ dashes: [Double]) -> UnsafeMutablePointer<CGFloat> {
         let p = UnsafeMutablePointer<CGFloat>.allocate(capacity: dashes.count * MemoryLayout<CGFloat>.size)
@@ -14,6 +14,10 @@ class RenderUtils {
             p[index] = CGFloat(item)
         }
         return p
+    }
+
+    public class func createNodeRenderer(_ node: Node) -> NodeRenderer {
+        return createNodeRenderer(node, view: nil)
     }
 
     class func createNodeRenderer(_ node: Node, view: MacawView?, parentRenderer: GroupRenderer? = nil) -> NodeRenderer {

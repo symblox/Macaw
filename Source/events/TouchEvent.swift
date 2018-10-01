@@ -18,7 +18,7 @@ public enum Relativity {
     case view
 }
 
-class NodePath {
+public class NodePath {
     let node: Node
     let location: CGPoint
     let parent: NodePath?

@@ -5,11 +5,11 @@ public func == (lhs: Node, rhs: Node) -> Bool {
 }
 
 extension NodeRenderer: Hashable {
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(Unmanaged.passUnretained(self).toOpaque())
     }
 }
 
-func == (lhs: NodeRenderer, rhs: NodeRenderer) -> Bool {
+public func == (lhs: NodeRenderer, rhs: NodeRenderer) -> Bool {
     return lhs === rhs
 }

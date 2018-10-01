@@ -6,7 +6,7 @@ import UIKit
 import AppKit
 #endif
 
-enum ColoringMode {
+public enum ColoringMode {
     case rgb, greyscale, alphaOnly
 }
 
@@ -20,7 +20,7 @@ class CachedLayer {
     }
 }
 
-class NodeRenderer {
+public class NodeRenderer {
 
     weak var view: MacawView?
     var sceneLayer: CALayer? {
